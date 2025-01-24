@@ -7,7 +7,7 @@ function removeJobsAlreadyApplied() {
         const footer = listItem.querySelector('ul.job-card-list__footer-wrapper');
         if (footer && footer.innerText.includes('Applied')) {
             // Remove the li element
-            console.log(listItem);
+            listItem.remove();
         }
     });
 }
