@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "IApplied",
+  "version": "0.0.1",
+  "author": "Abdulah Sibalo",
+  "description": "I already appied for that job, why am I seeing it again?? An extension for LinkedIn.",
+  "icons": {"16": "assets/iapplied-logo.png",
+            "48": "assets/iapplied-logo.png",
+            "128": "assets/iapplied-logo.png" },
+  "permissions": [
+    "tabs",
+    "management"
+  ],
+  "content_scripts": [{
+    "matches": [
+      "*://*.linkedin.com/jobs/*"
+    ],
+    "js": ["content.js"],
+    "runs_at": "document_start"
+  }]
+}
